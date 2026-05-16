@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GRAF — Estudio de automatización con IA</title>
+<meta name="description" content="Cuatro ingenieros automatizando procesos empresariales con IA. Ad-hoc, medible, sin humo." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Cursor follower -->
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- Grain overlay -->
+<div class="grain"></div>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">
+        <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+          <rect x="2" y="2" width="12" height="12" rx="2" fill="currentColor"/>
+          <rect x="18" y="2" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="2" y="18" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="18" y="18" width="12" height="12" rx="2" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="logo-text">GRAF</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#casos">Casos</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto" class="nav-cta">Hablemos <span>→</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="hero-grid">
+    <div class="hero-meta">
+      <span class="dot"></span>
+      <span>Disponibles · Q2 2026</span>
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line">Automatizamos</span>
+      <span class="line italic">lo que te</span>
+      <span class="line">roba <em>tiempo.</em></span>
+    </h1>
+
+    <p class="hero-sub">
+      Cuatro ingenieros. Soluciones de IA hechas a medida para empresas que prefieren resultados antes que diapositivas.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contacto" class="btn btn-primary">
+        <span>Pide un diagnóstico</span>
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#servicios" class="btn btn-ghost">Ver qué hacemos</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">04</span>
+        <span class="stat-label">Ingenieros · sin intermediarios</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Ad-hoc · ninguna plantilla</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">48h</span>
+        <span class="stat-label">Para la primera propuesta</span>
+      </div>
+    </div>
+
+    <!-- Visual element -->
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 600 600" class="orbit">
+        <defs>
+          <radialGradient id="g1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FF6B35" stop-opacity="0.35"/>
+            <stop offset="60%" stop-color="#FF6B35" stop-opacity="0.05"/>
+            <stop offset="100%" stop-color="#FF6B35" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="300" cy="300" r="250" fill="url(#g1)"/>
+        <circle cx="300" cy="300" r="200" fill="none" stroke="#0F0F0F" stroke-width="0.6" stroke-dasharray="2 6"/>
+        <circle cx="300" cy="300" r="140" fill="none" stroke="#0F0F0F" stroke-width="0.6" stroke-dasharray="2 6"/>
+        <circle cx="300" cy="300" r="80" fill="none" stroke="#0F0F0F" stroke-width="0.6"/>
+        <g class="orbit-node n1">
+          <circle r="6" fill="#0F0F0F"/>
+        </g>
+        <g class="orbit-node n2">
+          <circle r="4" fill="#FF6B35"/>
+        </g>
+        <g class="orbit-node n3">
+          <circle r="5" fill="#0F0F0F"/>
+        </g>
+        <text x="300" y="308" text-anchor="middle" font-family="Fraunces" font-size="48" font-weight="500" fill="#0F0F0F">IA</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Procesos repetitivos</span><span>•</span>
+      <span>Atención al cliente 24/7</span><span>•</span>
+      <span>Análisis de documentos</span><span>•</span>
+      <span>Integraciones a medida</span><span>•</span>
+      <span>Pipelines de datos</span><span>•</span>
+      <span>Agentes autónomos</span><span>•</span>
+      <span>Procesos repetitivos</span><span>•</span>
+      <span>Atención al cliente 24/7</span><span>•</span>
+      <span>Análisis de documentos</span><span>•</span>
+      <span>Integraciones a medida</span><span>•</span>
+      <span>Pipelines de datos</span><span>•</span>
+      <span>Agentes autónomos</span><span>•</span>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFIESTO -->
+<section class="manifesto">
+  <div class="container">
+    <div class="section-label">
+      <span class="num">01</span>
+      <span>Manifiesto</span>
+    </div>
+    <p class="manifesto-text">
+      Creemos que la IA <em>no es</em> un producto que se compra. Es una capacidad
+      que se <strong>integra</strong>. Por eso no vendemos suscripciones a un panel
+      genérico — diseñamos sistemas que encajan en la forma en la que <em>tu equipo</em>
+      ya trabaja, y se quedan funcionando cuando nos vamos.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="services">
+  <div class="container">
+    <div class="section-label">
+      <span class="num">02</span>
+      <span>Servicios</span>
+    </div>
+
+    <h2 class="section-title">
+      Cuatro maneras de <em>devolverte</em> horas a la semana.
+    </h2>
+
+    <div class="service-grid">
+
+      <article class="service-card" data-num="01">
+        <div class="service-head">
+          <span class="service-num">01</span>
+          <span class="service-tag">Agentes IA</span>
+        </div>
+        <h3>Agentes autónomos a medida</h3>
+        <p>Asistentes que leen tu correo, navegan tus sistemas y completan tareas reales. No chatbots — agentes con acceso a tus herramientas y permisos auditables.</p>
+        <ul class="service-points">
+          <li>Integración con tu stack (CRM, ERP, Slack…)</li>
+          <li>Trazabilidad de cada acción</li>
+          <li>Aprobaciones humanas donde toca</li>
+        </ul>
+      </article>
+
+      <article class="service-card" data-num="02">
+        <div class="service-head">
+          <span class="service-num">02</span>
+          <span class="service-tag">Procesos</span>
+        </div>
+        <h3>Automatización de procesos</h3>
+        <p>Esa tarea manual que alguien hace cada lunes durante tres horas. La identificamos, la diseccionamos y la convertimos en un flujo que se ejecuta solo.</p>
+        <ul class="service-points">
+          <li>Auditoría de procesos repetitivos</li>
+          <li>Workflows con IA + reglas</li>
+          <li>Dashboard de ahorro real</li>
+        </ul>
+      </article>
+
+      <article class="service-card" data-num="03">
+        <div class="service-head">
+          <span class="service-num">03</span>
+          <span class="service-tag">Documentos</span>
+        </div>
+        <h3>Extracción y análisis documental</h3>
+        <p>Facturas, contratos, formularios, PDFs imposibles. Convertimos montañas de papel y archivos en datos estructurados, validados y listos para usar.</p>
+        <ul class="service-points">
+          <li>OCR + razonamiento contextual</li>
+          <li>Validación cruzada con tus sistemas</li>
+          <li>Excepciones revisables en cola</li>
+        </ul>
+      </article>
+
+      <article class="service-card" data-num="04">
+        <div class="service-head">
+          <span class="service-num">04</span>
+          <span class="service-tag">Atención</span>
+        </div>
+        <h3>Atención al cliente con IA</h3>
+        <p>Soporte que responde en segundos, en cualquier canal, sin sonar a robot. Se conecta a tu base de conocimiento y escala a humano cuando hace falta.</p>
+        <ul class="service-points">
+          <li>Multicanal (web, WhatsApp, email)</li>
+          <li>Tono y vocabulario de tu marca</li>
+          <li>Métricas de resolución claras</li>
+        </ul>
+      </article>
+
+      <article class="service-card wide" data-num="05">
+        <div class="service-head">
+          <span class="service-num">05</span>
+          <span class="service-tag">Custom</span>
+        </div>
+        <h3>Lo que no entra en una caja</h3>
+        <p>Si tienes un cuello de botella raro, un sistema legacy intratable o una idea que nadie sabe si es posible — esa es probablemente la conversación que más nos interesa. Empezamos por un diagnóstico gratuito y te decimos sin rodeos si tiene sentido.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="process">
+  <div class="container">
+    <div class="section-label light">
+      <span class="num">03</span>
+      <span>Cómo trabajamos</span>
+    </div>
+
+    <h2 class="section-title light">
+      Un proceso <em>corto</em>, transparente<br>y honesto.
+    </h2>
+
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h4>Diagnóstico</h4>
+        <p>Una llamada de 45 min. Salimos sabiendo si podemos ayudarte — y tú con un plan, te contratemos o no.</p>
+        <span class="step-time">Día 1</span>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h4>Propuesta</h4>
+        <p>Alcance claro, precio cerrado, métricas de éxito. Sin "depende" ni letra pequeña.</p>
+        <span class="step-time">Día 2-3</span>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h4>Construcción</h4>
+        <p>Sprints cortos con demos cada semana. Ves el sistema crecer, no esperas a un "gran reveal".</p>
+        <span class="step-time">2-6 semanas</span>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h4>Entrega + acompañamiento</h4>
+        <p>Despliegue, formación al equipo y un mes de soporte incluido. Te lo dejamos funcionando, no en beta.</p>
+        <span class="step-time">Continuo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS / SOCIAL PROOF -->
+<section id="casos" class="cases">
+  <div class="container">
+    <div class="section-label">
+      <span class="num">04</span>
+      <span>Resultados que se miden</span>
+    </div>
+
+    <h2 class="section-title">
+      No prometemos magia.<br><em>Prometemos números.</em>
+    </h2>
+
+    <div class="case-grid">
+      <div class="case">
+        <div class="case-metric">−78%</div>
+        <p class="case-desc">Tiempo de procesamiento de facturas para una distribuidora de 40 empleados.</p>
+        <span class="case-tag">Logística</span>
+      </div>
+      <div class="case">
+        <div class="case-metric">3.2×</div>
+        <p class="case-desc">Más leads cualificados al automatizar la primera respuesta y seguimiento en una agencia inmobiliaria.</p>
+        <span class="case-tag">Inmobiliario</span>
+      </div>
+      <div class="case">
+        <div class="case-metric">12h</div>
+        <p class="case-desc">Recuperadas cada semana para el equipo de finanzas tras automatizar la conciliación bancaria.</p>
+        <span class="case-tag">Finanzas</span>
+      </div>
+    </div>
+
+    <blockquote class="quote">
+      <p>"Estábamos cansados de consultoras que vendían humo. GRAF vino, miró el proceso, y dos semanas después teníamos un sistema funcionando. No volvemos atrás."</p>
+      <footer>
+        <span class="quote-name">Marta R.</span>
+        <span class="quote-role">COO, distribuidora B2B</span>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section id="equipo" class="team">
+  <div class="container">
+    <div class="section-label">
+      <span class="num">05</span>
+      <span>Equipo</span>
+    </div>
+
+    <h2 class="section-title">
+      Somos <em>cuatro.</em> No subcontratamos.<br>Tu proyecto lo construimos nosotros.
+    </h2>
+
+    <div class="team-grid">
+      <div class="member">
+        <div class="member-photo" style="--c1:#FFD6BA;--c2:#FF6B35;">
+          <span class="member-initial">G</span>
+        </div>
+        <h4>Gaizka</h4>
+        <span class="member-role">Backend & infraestructura</span>
+        <p class="member-bio">Años montando sistemas que no se caen. Cree que el código aburrido es el mejor código.</p>
+      </div>
+      <div class="member">
+        <div class="member-photo" style="--c1:#C7E6D2;--c2:#3D7A55;">
+          <span class="member-initial">F</span>
+        </div>
+        <h4>Felipe</h4>
+        <span class="member-role">IA & modelos</span>
+        <p class="member-bio">Le gusta ver sus modelos resolver problemas reales, no quedarse en notebooks.</p>
+      </div>
+      <div class="member">
+        <div class="member-photo" style="--c1:#D4D4F5;--c2:#4A4AC4;">
+          <span class="member-initial">A</span>
+        </div>
+        <h4>Alfonso</h4>
+        <span class="member-role">Producto & UX</span>
+        <p class="member-bio">Diseña la parte que tu equipo va a usar todos los días. La parte que importa.</p>
+      </div>
+      <div class="member">
+        <div class="member-photo" style="--c1:#F5E1A4;--c2:#A0801F;">
+          <span class="member-initial">R</span>
+        </div>
+        <h4>Rubén</h4>
+        <span class="member-role">Integraciones & datos</span>
+        <p class="member-bio">APIs, bases de datos, sistemas legacy con interfaces de 1998. Le encantan los retos imposibles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-label">
+      <span class="num">06</span>
+      <span>Lo que nos preguntan</span>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>
+          <span>¿Cuánto cuesta un proyecto?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>Depende del alcance, pero somos transparentes: tras el diagnóstico te damos un precio cerrado. La mayoría de proyectos están entre 6.000€ y 30.000€. Sin sorpresas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>¿Mis datos viajan a OpenAI / un tercero?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>Solo si tú quieres. Trabajamos con modelos en la nube, en tu propia infraestructura o modelos abiertos auto-hospedados. Cada proyecto se diseña con la privacidad que necesitas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>¿Y si soy una empresa muy pequeña?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>Trabajamos tanto con autónomos como con corporativas. Si el caso de uso ahorra tiempo real, el tamaño no importa.</p>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>¿Qué pasa cuando termina el proyecto?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>Te dejamos el código, la documentación y el equipo formado. Si quieres, mantenemos un contrato de soporte mensual. Si no, también — no te atamos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span>¿Por qué solo cuatro?</span>
+          <span class="faq-icon">+</span>
+        </summary>
+        <p>Porque preferimos hablar contigo directamente que tener una capa de comerciales y project managers entre medias. Cuatro buenos ingenieros hacen más que veinte mediocres.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO / CTA -->
+<section id="contacto" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="section-label light">
+          <span class="num">07</span>
+          <span>Contacto</span>
+        </div>
+        <h2 class="contact-title">
+          ¿Tienes un proceso<br>que te quita el sueño?
+        </h2>
+        <p class="contact-sub">
+          Cuéntanoslo en 2 frases. Te respondemos en menos de 48h con una opinión honesta — y si encaja, una propuesta concreta.
+        </p>
+        <div class="contact-direct">
+          <a href="mailto:hola@graf.studio" class="contact-mail">hola@graf.studio</a>
+          <span class="contact-location">Madrid · Remoto</span>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="field">
+          <label for="name">Tu nombre</label>
+          <input id="name" name="name" type="text" required placeholder="Ana López" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="ana@empresa.com" />
+        </div>
+        <div class="field">
+          <label for="company">Empresa</label>
+          <input id="company" name="company" type="text" placeholder="Acme S.L." />
+        </div>
+        <div class="field">
+          <label for="message">¿Qué quieres automatizar?</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Cada semana mi equipo dedica X horas a..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span>Enviar mensaje</span>
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-mark">
+          <svg viewBox="0 0 32 32" width="22" height="22">
+            <rect x="2" y="2" width="12" height="12" rx="2" fill="currentColor"/>
+            <rect x="18" y="2" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="2" y="18" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="18" y="18" width="12" height="12" rx="2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo-text">GRAF</span>
+        <p>Estudio de automatización con IA.<br>Hecho con cuidado en Madrid.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Estudio</h5>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#equipo">Equipo</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <a href="mailto:hola@graf.studio">hola@graf.studio</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="#">Aviso legal</a>
+        <a href="#">Privacidad</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GRAF Studio</span>
+      <span class="footer-pulse"><span class="pulse-dot"></span> Disponibles para nuevos proyectos</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
