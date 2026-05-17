@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Bloqueamos solo lo evidente
+Disallow: /api/
+Disallow: /admin/
+
+Sitemap: https://graf-studio.es/sitemap.xml
