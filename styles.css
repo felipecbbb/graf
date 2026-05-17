@@ -926,6 +926,14 @@ img, svg { display: block; max-width: 100%; }
   backdrop-filter: blur(8px);
 }
 .field { display: flex; flex-direction: column; gap: 8px; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
 .field label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;

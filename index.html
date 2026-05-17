@@ -441,16 +441,28 @@
           <label for="company">Empresa</label>
           <input id="company" name="company" type="text" placeholder="Acme S.L." />
         </div>
-        <div class="field field-select">
-          <label for="budget">Presupuesto estimado</label>
-          <select id="budget" name="budget" required>
-            <option value="" disabled selected>Selecciona un rango</option>
-            <option value="2-6">2.000 € – 6.000 €</option>
-            <option value="6-15">6.000 € – 15.000 €</option>
-            <option value="15-30">15.000 € – 30.000 €</option>
-            <option value="30+">Más de 30.000 €</option>
-            <option value="open">Aún por definir — lo vemos juntos</option>
-          </select>
+        <div class="form-row">
+          <div class="field field-select">
+            <label for="budget">Presupuesto estimado</label>
+            <select id="budget" name="budget" required>
+              <option value="" disabled selected>Selecciona un rango</option>
+              <option value="2-6">2.000 € – 6.000 €</option>
+              <option value="6-15">6.000 € – 15.000 €</option>
+              <option value="15-30">15.000 € – 30.000 €</option>
+              <option value="30+">Más de 30.000 €</option>
+              <option value="open">Aún por definir</option>
+            </select>
+          </div>
+          <div class="field field-select">
+            <label for="timeline">¿Cuándo lo necesitas?</label>
+            <select id="timeline" name="timeline" required>
+              <option value="" disabled selected>Selecciona plazo</option>
+              <option value="urgent">Urgente · ya</option>
+              <option value="1-3m">En 1–3 meses</option>
+              <option value="3-6m">En 3–6 meses</option>
+              <option value="exploring">Sin prisa · explorando</option>
+            </select>
+          </div>
         </div>
         <div class="field">
           <label for="message">¿Qué quieres automatizar?</label>
