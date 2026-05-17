@@ -441,6 +441,17 @@
           <label for="company">Empresa</label>
           <input id="company" name="company" type="text" placeholder="Acme S.L." />
         </div>
+        <div class="field field-select">
+          <label for="budget">Presupuesto estimado</label>
+          <select id="budget" name="budget" required>
+            <option value="" disabled selected>Selecciona un rango</option>
+            <option value="2-6">2.000 € – 6.000 €</option>
+            <option value="6-15">6.000 € – 15.000 €</option>
+            <option value="15-30">15.000 € – 30.000 €</option>
+            <option value="30+">Más de 30.000 €</option>
+            <option value="open">Aún por definir — lo vemos juntos</option>
+          </select>
+        </div>
         <div class="field">
           <label for="message">¿Qué quieres automatizar?</label>
           <textarea id="message" name="message" rows="4" required placeholder="Cada semana mi equipo dedica X horas a..."></textarea>

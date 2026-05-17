@@ -934,7 +934,8 @@ img, svg { display: block; max-width: 100%; }
   color: rgba(245, 241, 234, 0.55);
 }
 .field input,
-.field textarea {
+.field textarea,
+.field select {
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(245, 241, 234, 0.2);
@@ -946,13 +947,41 @@ img, svg { display: block; max-width: 100%; }
   resize: none;
 }
 .field input:focus,
-.field textarea:focus {
+.field textarea:focus,
+.field select:focus {
   outline: none;
   border-bottom-color: var(--accent);
 }
 .field input::placeholder,
 .field textarea::placeholder {
   color: rgba(245, 241, 234, 0.3);
+}
+
+/* Custom select styling */
+.field-select { position: relative; }
+.field select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  padding-right: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF6B35' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 16px;
+}
+.field select option {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 12px;
+}
+.field select:invalid,
+.field select option[value=""] {
+  color: rgba(245, 241, 234, 0.3);
+}
+.field select:valid {
+  color: var(--cream);
 }
 .contact-form .btn-primary {
   margin-top: 12px;
