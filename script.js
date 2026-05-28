@@ -45,14 +45,25 @@ const io = new IntersectionObserver((entries) => {
 revealEls.forEach(el => io.observe(el));
 
 // ---------- Form handler ----------
-function handleSubmit(event) {
+async function handleSubmit(event) {
   event.preventDefault();
   const note = document.getElementById('formNote');
   const form = event.target;
+  const button = form.querySelector('button[type="submit"]');
+  const data = Object.fromEntries(new FormData(form).entries());
 
+  note.style.color = '';
   note.textContent = 'Enviando…';
+  if (button) button.disabled = true;
 
-  setTimeout(() => {
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Respuesta no válida');
+
     note.textContent = '✓ Mensaje recibido. Te respondemos en menos de 48h.';
     note.style.color = '#4ADE80';
     form.reset();
@@ -61,7 +72,12 @@ function handleSubmit(event) {
       note.textContent = '';
       note.style.color = '';
     }, 6000);
-  }, 800);
+  } catch (err) {
+    note.textContent = 'No se pudo enviar. Escríbenos a comunicaciones@graf-studio.es';
+    note.style.color = '#F87171';
+  } finally {
+    if (button) button.disabled = false;
+  }
 }
 
 // ---------- Subtle parallax on hero visual ----------
